@@ -63,6 +63,32 @@ class User extends CI_Model {
         $delete = $this->db->delete('users',array('id'=>$id));
         return $delete?true:false;
     }
-
+	/*
+	*get userDetails
+	*/
+	public function User_Details($id){
+		
+		$this->db->where('id',$id);
+		$query=$this->db->get('users');
+		$result=$query->result();
+		$num_rows=$query->num_rows();
+		return $result;
+	}
+/*
+*login
+*/
+public function login($email,$password){
+		
+		$this->db->where('email',$email);
+		$this->db->where('password',md5($password));
+		$query=$this->db->get('users');
+		$result=$query->result();
+		$num_rows=$query->num_rows(); 
+		if($num_rows<1){
+			return false;
+		}else{
+			return $result;
+		}
+	}
 }
 ?>

@@ -63,10 +63,181 @@ require_once(APPPATH.'views\intern\header.php');
 #exTab1{
   margin-top:4% !important;
 }
+
+
+/*list tab group panel programs*/
+
+.programs .col-md-9{
+	padding: 2% 2% 2% 2%;
+    font-family: serif;
+    background-color: #d6dce2d1;
+} */
+.programs .col-md-8{
+	font-family: serif;
+	padding: 2% 2% 2% 2%;
+    background-color: #d6dce2d1;
+}
+.col-md-8{
+	font-family:serif;
+	text-align: justify;
+}
+.nav>li{
+	    padding-left: 8px !important;
+}
+.nav-pills>li+li{
+	    margin-left: 2.4px;
+}
+@media screen and  (max-width: 480px){
+  
+	.nav>li{
+		width:12%;
+	}
+	
+}
 </style>
+<!--slider -->
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+                <img src="assets/img/portfolio/fullsize/1.jpg" alt="First Slide">
+         		<div class="carousel-caption">
+                  <h3>W3c Group of solutions </h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/portfolio/fullsize/2.jpg" alt="Second Slide">
+                <div class="carousel-caption">
+                  <h3>W3c Group of solutions </h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/portfolio/fullsize/3.jpg" alt="Third Slide">
+                <div class="carousel-caption">
+                  <h3>W3c Group of solutions </h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<!--search--->
+  <!--<div id='search-box'>
+<form action='/search' id='search-form' method='get' target='_top'>
+<input id='search-text' name='q' placeholder='Search' type='text'/>
+<button id='search-button' type='submit'>                     
+<span>Search</span>
+</button>
+</form>
+</div>-->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  console.log(dots);
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides,2000); // Change image every 2 seconds
+}
+</script>
+<!---index---->
 	<div class="container-fluid">
-		<h3>Interns</h3>
+		<h3>Our Services</h3>
 		<div class="intern">
+		<!--Training programs-->
+<div id="exTab1" class="container programs" >	
+<ul  class="nav nav-pills list-inline">
+			<li class="active"><a  href="#designing" data-toggle="tab">Web Designing</a></li>
+			<li><a href="#development" data-toggle="tab">Web Development</a></li>
+			<li><a href="#digitalmarketing" data-toggle="tab">Digital marketing</a></li>
+			<li><a href="#mobile" data-toggle="tab">Mobile Application Development</a></li>
+			<li><a href="#recruiters" data-toggle="tab">IT Recruitment</a></li>
+			<li><a href="#Training" data-toggle="tab">IT Training</a></li>
+			<li><a href="#consulting" data-toggle="tab">Consulting</a></li>
+		</ul>
+
+			<div class="tab-content clearfix">
+			  <div class="tab-pane active" id="designing">
+       <div class="row">
+	   <div class="col-md-4"><img src="assets/img/designing.jpg"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('webdesigningcompany');?>" target="_blank">ReamMore</a>.</div>
+	   </div>
+		  <!--tab1 -->
+				</div>
+				<div class="tab-pane" id="development">
+            <div class="row">
+	   <div class="col-md-4"><img src="assets/img/development.jpg"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('webdevelopmentcompany');?>" target="_blank">ReamMore</a>.</div>
+	   </div>
+<!--extab2-->
+				</div>
+        <div class="tab-pane" id="digitalmarketing">
+            <div class="row">
+	   <div class="col-md-4"><img src="assets/img/digitalmarketing.jpg"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('Digitalmarketingcompany');?>" target="_blank">ReamMore</a>.</div>
+	   </div>
+<!--extab3-->
+				</div>
+		 <div class="tab-pane" id="consulting">
+            <div class="row">
+	   <div class="col-md-4"><img src="assets/img/business_analyst.jpg"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('ConsultingCompany');?>" target="_blank" >ReamMore</a>.</div>
+	   </div>
+<!--extab4-->
+		</div>
+		<div class="tab-pane" id="recruiters">
+            <div class="row">
+	   <div class="col-md-4"><img src="assets/img/intern_recruiters.jpg" class="image"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('ITRecruitmentcompany');?>" target="_blank">ReamMore</a>.</div>
+	   </div>
+<!--extab5-->
+</div>
+<div class="tab-pane" id="mobile">
+            <div class="row">
+	   <div class="col-md-4"><img src="assets/img/intern_android.jpg"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('MobileApplicationcompany');?>" target="_blank" >ReamMore</a>.</div>
+	   </div>
+<!--extab6-->
+</div>
+<div class="tab-pane" id="Training">
+            <div class="row">
+	   <div class="col-md-4"><img src="assets/img/intern_training.jpg" width="100%"></div>
+	   <div class="col-md-8">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<a href="<?php echo site_url('ITTrainingcompany');?>" target="_blank" >ReamMore</a>.</div>
+	   </div>
+<!--extab7-->
+				</div>	
+        
+			</div>
+  </div>
+		<!--programblock-->
 			 <div class="row">
 				<div class="col-md-6">
 					<div class="col-md-12 inn">
@@ -286,7 +457,7 @@ require_once(APPPATH.'views\intern\header.php');
 
 <?php 
 
-//require_once('footer.php');
+require_once('footer.php');
 
 ?>
 
