@@ -16,7 +16,7 @@ public function __construct(){
 **inter index
 */
 public function index(){
-	
+//--	
 $this->load->view('intern/index');
 
 } 
